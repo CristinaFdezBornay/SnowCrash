@@ -12,7 +12,7 @@ In this level we have to:
 ## 👾 Commands
 
 ```
-scp -P 4242 level02@192.168.56.3:/home/user/level02/level02.pcap ./level02/Resources/level02.pcap
+scp -P 4242 level02@192.168.56.3:/home/user/level02/level02.pcap ./level02/level02.pcap
 ```
 
 ## 🔍 Resources

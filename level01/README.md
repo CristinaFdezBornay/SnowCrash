@@ -10,8 +10,8 @@ In this level we have to:
 
 ```
 cat /etc/passwd | grep "flag01"
-scp -P 4242 level01@192.168.56.3:/etc/passwd ./level01/Resources/etc_passwd
-john level01/Resources/etc_passwd --show
+scp -P 4242 level01@192.168.56.3:/etc/passwd ./level01/etc_passwd
+john level01/etc_passwd --show
 ```
 
 ## 🔍 Resources
